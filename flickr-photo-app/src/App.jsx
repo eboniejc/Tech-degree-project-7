@@ -19,6 +19,7 @@ function App() {
       const url = `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&tags=${query}&per_page=24&format=json&nojsoncallback=1`;
       const response = await fetch(url);
       const data = await response.json();
+      //Show Photos
       if (data && data.photos && data.photos.photo) {
         setPhotos(data.photos.photo);
       } else {

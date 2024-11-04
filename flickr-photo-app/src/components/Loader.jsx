@@ -1,5 +1,5 @@
 import { DNA } from "react-loader-spinner"
-
+//DNA loader from https://mhnpd.github.io/react-loader-spinner/docs/components/dna
 function Loader() {
     return (
         <DNA
