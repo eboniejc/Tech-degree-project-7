@@ -4,7 +4,7 @@ const Photo = ({ photo }) => {
   if (!photo) {
     return null;
   }
-
+//api URL
   const url = `https://live.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}_q.jpg`;
 
   return (

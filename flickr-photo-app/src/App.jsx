@@ -12,6 +12,7 @@ function App() {
   const [loading, setLoading] = useState(true);
   const location = useLocation();
 
+  //Grab API
   const fetchData = async (query) => {
     setLoading(true);
     try {
@@ -51,7 +52,8 @@ function App() {
     }
 
   }, [location.pathname]); 
-
+ 
+//Routes
   return (
     <div className="App">
       <Search onSearch={fetchData} />
@@ -62,7 +64,7 @@ function App() {
         <Route path="/dogs" element={<PhotoList title="Dogs" photos={photos} loading={loading} />} />
         <Route path="/computers" element={<PhotoList title="Computers" photos={photos} loading={loading} />} />
         <Route path="/search/:query" element={<SearchResults fetchData={fetchData} photos={photos} loading={loading} />} />
-        <Route path="*" element={<NotFound />} />  // Exceeds Expectations
+        <Route path="*" element={<NotFound />} /> 
       </Routes>
     </div>
   );
